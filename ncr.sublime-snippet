@@ -1,0 +1,37 @@
+<snippet>
+	<content><![CDATA[
+
+
+ll powmod(int x, int p) {
+	ll res = 1;
+	x %= p;
+	while (p > 0) {
+		if (p & 1) res = (res*x)%MOD;
+		x = (x * x)%MOD;
+		p >>= 1;
+	}
+	return res;
+}
+
+vector<ll> fac(1, 1);
+ll fact(int n) {
+	while (n >= (int)fac.size()) {
+		fac.push_back((fac.back() * (ll)fac.size()) % MOD);
+	}
+	return fac[n]; 
+}
+
+ll ncr(int n, int r) {
+	ll num = fact(n);
+	ll den = (fact(r) * fact(n-r)) % MOD;
+	den = powmod(den, MOD-2);
+	return (num * den) % MOD;
+}
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>ncr</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

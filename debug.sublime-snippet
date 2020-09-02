@@ -1,0 +1,32 @@
+<snippet>
+	<content><![CDATA[
+
+bool _DEBUG;
+#define CLK clock_t clk = clock();//Start of main
+#define OCLK cerr << "Time (in ms): " << (double)(clock() - clk) * 1000.0 / CLOCKS_PER_SEC << '\n';//End of main
+#define debug(x) if(_DEBUG)cout<<"["<<#x<<"="x<<"]\n";
+
+
+
+
+
+int main(){
+#ifdef LOCAL
+	_DEBUG = true;
+#endif
+CLK;
+ios_base::sync_with_stdio(false);cin.tie(NULL);
+	
+	int t; cin >> t; while(t--)
+	solve();
+
+OCLK;
+}
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>debug</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

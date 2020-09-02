@@ -1,0 +1,61 @@
+<snippet>
+	<content><![CDATA[
+#include<bits/stdc++.h>
+using namespace std;
+
+#define ull unsigned long long
+#define ll long long
+#define ld long double
+#define uint unsigned int
+#define vi vector<int>
+#define pii pair<int,int>
+
+#define for0(i,n) for(int i=0; i<(n); i++)
+#define for1(i,n) for(int i=1; i<=(n); i++)
+#define from(i,a,b) for(int i=(a); i<=(b); i++)
+#define forr(i,a,b) for(int i=(a); i>=(b); i--)
+
+#define PB push_back
+#define MP make_pair
+#define FI first
+#define SE second
+
+#define all(x) (x).begin(),(x).end()
+#define len(x) (int)(x).size()
+bool _DEBUG;
+#define CLK clock_t clk = clock();//Start of main
+#define OCLK cerr << "Time (in ms): " << (double)(clock() - clk) * 1000.0 / CLOCKS_PER_SEC << '\n';//End of main
+#define debug(x) if(_DEBUG)cout<<"["<<#x<<"="x<<"]\n";
+template <class T> bool amax(T& x, T y){if(x<y){x=y;return 1;}return 0;}
+template <class T> bool amin(T& x, T y){if(x>y){x=y;return 1;}return 0;}
+
+
+
+
+
+
+
+void solve(){
+}
+
+
+int main(){
+#ifdef LOCAL
+	_DEBUG = true;
+#endif
+CLK;
+ios_base::sync_with_stdio(false);cin.tie(NULL);
+	
+	int t; cin >> t; while(t--)
+	solve();
+
+OCLK;
+}
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>include</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>
