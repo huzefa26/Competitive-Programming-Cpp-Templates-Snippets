@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+
+ull bernstein_hash (string s)
+{
+	ull h = 0;
+	for (char c: s)
+		h = 33 * h + c;
+	return h;
+}
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>hash_string</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

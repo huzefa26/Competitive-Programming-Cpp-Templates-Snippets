@@ -1,0 +1,23 @@
+<snippet>
+	<content><![CDATA[
+
+int spf[MXN];
+void sieve() {
+	iota(spf, spf+MXN, 1);
+	for (int i=4; i<MXN; i+=2)spf[i]=2;
+	for (int i=3; i*i<MXN; i+=2) {
+		if (spf[i] == i) {
+			for (int j=i*i; j<MXN; j+=i)
+				if (spf[j]==j) spf[j] = i;
+		}
+	}
+}
+
+vector<int> factorize(int x) {vector<int> ret;while(x!=1){ret.push_back(spf[x]);x/=spf[x];}return ret;}
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>primes_sieve</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>
